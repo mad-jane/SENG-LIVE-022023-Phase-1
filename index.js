@@ -30,3 +30,51 @@ const pokemons = [
     likes: 11,
   },
 ];
+
+const test2 = document.querySelector('div')
+// const test = document.querySelectorAll('div')
+
+// console.log(test)
+// console.log(test2)
+
+// const welcomeP = document.createElement('p')
+
+// welcomeP.innerHTML = "<span class ='hello'> hello world </span>"
+
+// test2.appendChild(welcomeP)
+
+// test2.remove()
+
+const pokeForm = document.getElementById('poke-form')
+console.log(pokeForm)
+
+const pokeContainer = document.querySelector('#poke-container')
+console.log(pokeContainer)
+
+const labels = document.getElementsByClassName('form-label')
+console.log(labels)
+
+const allDivs = document.querySelectorAll('div')
+console.log(allDivs)
+
+const goals = document.getElementById('lecture-goals')
+goals.remove()
+
+const renderPokemon = () => {
+    // const pokeDiv = document.getElementById('poke-container')
+    const pokeDiv = document.querySelector('#poke-container')
+    pokemons.forEach((poke) => {
+        const pokeP = document.createElement('p')
+        pokeP.setAttribute('align', 'center')
+        pokeP.innerHTML = `<img src=${poke.img} width="550" height="400">`
+        // const pokeHTML = `<p align ="center"> <img src=${poke.img} width="550" height="400"> </p>`
+        // debugger
+        pokeDiv.appendChild(pokeP)
+    })
+}
+
+renderPokemon()
+
+// const text= '<p>hello again</p>'
+
+// test2.appendChild(text)
